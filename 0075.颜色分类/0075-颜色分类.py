@@ -4,8 +4,8 @@ class Solution:
         Do not return anything, modify nums in-place instead.
         """
         # they say use three pointer
-        f,m = 0,0
-        l = len(nums) -1
+        f, m = 0, 0
+        l = len(nums) - 1
         while m <= l:
             if nums[m] == 2:
                 nums[m], nums[l] = nums[l], nums[m]
@@ -18,13 +18,7 @@ class Solution:
                 f += 1
             elif nums[m] == 1:
                 m += 1
-                
-                    
-        
-        
-              
-            
-        
+
         """
         record = {}
         

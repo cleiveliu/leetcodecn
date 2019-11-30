@@ -5,14 +5,15 @@
 #         self.left = None
 #         self.right = None
 
+
 class Solution:
     def rightSideView(self, root: TreeNode) -> List[int]:
         if not root:
             return []
-        
+
         ret = []
         stack = [root]
-        
+
         while stack:
             new_stack = []
             ret.append(stack[-1].val)
@@ -24,4 +25,3 @@ class Solution:
                     new_stack.append(node.right)
             stack = new_stack
         return ret
-                    

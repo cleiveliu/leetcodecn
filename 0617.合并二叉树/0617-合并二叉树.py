@@ -5,6 +5,7 @@
 #         self.left = None
 #         self.right = None
 
+
 class Solution:
     def mergeTrees(self, t1: TreeNode, t2: TreeNode) -> TreeNode:
         def h(n1, n2):
@@ -15,4 +16,5 @@ class Solution:
                 return n1
             else:
                 return n1 or n2
+
         return h(t1, t2)

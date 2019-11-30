@@ -6,8 +6,7 @@ class Solution:
                 if d[key] == -1 and num > key:
                     d[key] = num
             d[num] = -1
-        ret = [0]*len(nums1)
-        for i,n in enumerate(nums1):
-            ret[i] = d.get(n,0)
+        ret = [0] * len(nums1)
+        for i, n in enumerate(nums1):
+            ret[i] = d.get(n, 0)
         return ret
-            

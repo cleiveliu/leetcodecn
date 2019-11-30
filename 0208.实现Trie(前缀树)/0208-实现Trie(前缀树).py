@@ -1,12 +1,11 @@
-
 class Trie:
-
     def __init__(self):
         """
         Initialize your data structure here.
         """
         self.head = {}
-        self.mark = '@'
+        self.mark = "@"
+
     def insert(self, word: str) -> None:
         """
         Inserts a word into the trie.
@@ -43,7 +42,6 @@ class Trie:
             else:
                 return False
         return True
-        
 
 
 # Your Trie object will be instantiated and called as such:

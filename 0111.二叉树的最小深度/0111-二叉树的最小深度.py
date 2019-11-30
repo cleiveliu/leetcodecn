@@ -5,6 +5,7 @@
 #         self.left = None
 #         self.right = None
 
+
 class Solution:
     def minDepth(self, root: TreeNode) -> int:
         def h(root):
@@ -18,4 +19,5 @@ class Solution:
                 return 1 + h(root.left)
             if root.right:
                 return 1 + h(root.right)
+
         return h(root)

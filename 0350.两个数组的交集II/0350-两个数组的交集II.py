@@ -2,7 +2,7 @@ class Solution:
     def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
         nums1.sort()
         nums2.sort()
-        i,j = 0,0
+        i, j = 0, 0
         ret = []
         while i < len(nums1) and j < len(nums2):
             if nums1[i] == nums2[j]:
@@ -14,4 +14,3 @@ class Solution:
             else:
                 i += 1
         return ret
-        

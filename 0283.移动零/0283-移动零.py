@@ -3,7 +3,7 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        slow, fast = 0,0
+        slow, fast = 0, 0
         while fast < len(nums):
             if nums[fast] != 0:
                 nums[slow], nums[fast] = nums[fast], nums[slow]
@@ -11,6 +11,3 @@ class Solution:
                 fast += 1
             else:
                 fast += 1
-            
-                
-        

@@ -5,13 +5,15 @@ class Node:
         self.val = val
         self.children = children
 """
+
+
 class Solution:
-    def postorder(self, root: 'Node') -> List[int]:
-        ret = [] 
+    def postorder(self, root: "Node") -> List[int]:
+        ret = []
         if not root:
             return ret
         for child in root.children:
             ret.extend(self.postorder(child))
         ret.append(root.val)
-        
+
         return ret

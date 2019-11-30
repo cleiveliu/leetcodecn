@@ -1,11 +1,9 @@
 class MyHashMap:
-
     def __init__(self):
         """
         Initialize your data structure here.
         """
-        self.data = [False]*(1000_000+1)
-        
+        self.data = [False] * (1000_000 + 1)
 
     def put(self, key: int, value: int) -> None:
         """

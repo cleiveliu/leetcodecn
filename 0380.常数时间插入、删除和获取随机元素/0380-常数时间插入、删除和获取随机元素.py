@@ -1,12 +1,12 @@
 from random import choice
-class RandomizedSet:
 
+
+class RandomizedSet:
     def __init__(self):
         """
         Initialize your data structure here.
         """
         self.s = set()
-        
 
     def insert(self, val: int) -> bool:
         """

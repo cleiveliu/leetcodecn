@@ -4,10 +4,11 @@
 #         self.val = x
 #         self.next = None
 
+
 class Solution:
     def reverseBetween(self, head: ListNode, m: int, n: int) -> ListNode:
         def h(head):
-            #reverse the list
+            # reverse the list
             pre = None
             cur = head
             while cur.next:
@@ -17,6 +18,7 @@ class Solution:
                 pre = tem
             cur.next = pre
             return cur, head
+
         pre = None
         after = None
         cur = head
@@ -24,7 +26,7 @@ class Solution:
         start = None
         while cur:
             i += 1
-            if i == m-1:
+            if i == m - 1:
                 pre = cur
             if i == m:
                 start = cur

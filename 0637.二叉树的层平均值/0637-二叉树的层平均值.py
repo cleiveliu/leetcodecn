@@ -5,6 +5,7 @@
 #         self.left = None
 #         self.right = None
 
+
 class Solution:
     def averageOfLevels(self, root: TreeNode) -> List[float]:
         if not root:
@@ -12,7 +13,7 @@ class Solution:
         stack = [root]
         ret = []
         while stack:
-            new_stack =[]
+            new_stack = []
             vals = []
             while stack:
                 node = stack.pop(0)
@@ -23,4 +24,4 @@ class Solution:
                     new_stack.append(node.right)
             stack = new_stack
             ret.append(vals)
-        return list(map(lambda arr: sum(arr)/len(arr), ret))
+        return list(map(lambda arr: sum(arr) / len(arr), ret))

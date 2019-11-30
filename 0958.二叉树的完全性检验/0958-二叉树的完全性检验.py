@@ -5,13 +5,14 @@
 #         self.left = None
 #         self.right = None
 
+
 class Solution:
     def isCompleteTree(self, root: TreeNode) -> bool:
-        
+
         if not root:
             return True
         stack = [root]
-        is_last = False # bottom level
+        is_last = False  # bottom level
         level = 0
         while stack:
             if is_last:
@@ -19,9 +20,9 @@ class Solution:
                     return False
                 else:
                     return True
-            if not is_last and len(stack) != 2**level:
+            if not is_last and len(stack) != 2 ** level:
                 return False
-            
+
             new_stack = []
             while stack:
                 node = stack.pop(0)
@@ -42,4 +43,3 @@ class Solution:
             stack = new_stack
             level += 1
         return True
-                    

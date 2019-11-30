@@ -5,6 +5,7 @@
 #         self.left = None
 #         self.right = None
 
+
 class Solution:
     def searchBST(self, root: TreeNode, val: int) -> TreeNode:
         if not root:

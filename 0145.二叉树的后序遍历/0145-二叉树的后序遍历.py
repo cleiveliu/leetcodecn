@@ -5,18 +5,19 @@
 #         self.left = None
 #         self.right = None
 
+
 class Solution:
     def postorderTraversal(self, root: TreeNode) -> List[int]:
-        def post(node,ret):
+        def post(node, ret):
             if node.left:
-                post(node.left,ret)
+                post(node.left, ret)
             if node.right:
-                post(node.right,ret)
+                post(node.right, ret)
             ret.append(node.val)
+
         if not root:
             return []
-        
+
         ret = []
-        post(root,ret)
+        post(root, ret)
         return ret
-        

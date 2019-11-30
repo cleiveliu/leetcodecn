@@ -4,6 +4,7 @@
 #         self.val = x
 #         self.next = None
 
+
 class Solution:
     def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
         def merge(n1, n2):
@@ -17,4 +18,5 @@ class Solution:
                     n2.next = merge(n1, n2.next)
                     return n2
             return n1 or n2
+
         return merge(l1, l2)

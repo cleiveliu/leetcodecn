@@ -5,8 +5,8 @@
 #         self.left = None
 #         self.right = None
 
-class BSTIterator:
 
+class BSTIterator:
     def __init__(self, root: TreeNode):
         def h(root):
             if not root:
@@ -14,6 +14,7 @@ class BSTIterator:
             yield from h(root.left)
             yield root.val
             yield from h(root.right)
+
         self.cache = []
         self.gen = h(root)
 
@@ -23,7 +24,6 @@ class BSTIterator:
         """
         if self.hasNext():
             return self.cache.pop()
-        
 
     def hasNext(self) -> bool:
         """
@@ -37,7 +37,6 @@ class BSTIterator:
             return True
         except:
             return False
-        
 
 
 # Your BSTIterator object will be instantiated and called as such:

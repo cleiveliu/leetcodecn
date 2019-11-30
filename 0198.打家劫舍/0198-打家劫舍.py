@@ -4,7 +4,6 @@ class Solution:
         pre = 0
         for num in nums:
             temp = ret
-            ret = max(ret, pre+num)
+            ret = max(ret, pre + num)
             pre = temp
         return ret
-            

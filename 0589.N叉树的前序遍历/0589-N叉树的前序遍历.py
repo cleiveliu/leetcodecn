@@ -5,13 +5,15 @@ class Node:
         self.val = val
         self.children = children
 """
+
+
 class Solution:
-    def preorder(self, root: 'Node') -> List[int]:
+    def preorder(self, root: "Node") -> List[int]:
         ret = []
         if not root:
             return ret
         ret.append(root.val)
         for child in root.children:
             ret.extend(self.preorder(child))
-        
+
         return ret

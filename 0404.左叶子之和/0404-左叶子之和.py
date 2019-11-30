@@ -5,6 +5,7 @@
 #         self.left = None
 #         self.right = None
 
+
 class Solution:
     def sumOfLeftLeaves(self, root: TreeNode) -> int:
         def h(node):
@@ -13,5 +14,5 @@ class Solution:
             if node.left and not node.left.left and not node.left.right:
                 return node.left.val + h(node.right)
             return h(node.left) + h(node.right)
+
         return h(root)
-            

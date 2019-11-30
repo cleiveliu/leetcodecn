@@ -4,11 +4,12 @@
 #         self.val = x
 #         self.next = None
 
+
 class Solution:
     def deleteDuplicates(self, head: ListNode) -> ListNode:
         if not head or not head.next:
             return head
-        pre,cur = head,head.next
+        pre, cur = head, head.next
         while cur:
             while cur and pre.val == cur.val:
                 cur = cur.next

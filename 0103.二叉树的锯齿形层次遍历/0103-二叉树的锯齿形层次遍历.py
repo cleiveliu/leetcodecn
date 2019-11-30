@@ -5,11 +5,12 @@
 #         self.left = None
 #         self.right = None
 
+
 class Solution:
     def zigzagLevelOrder(self, root: TreeNode) -> List[List[int]]:
         if not root:
             return []
-        
+
         ret = []
         stack = [root]
         reverse = False
@@ -29,5 +30,3 @@ class Solution:
             stack = new_stack
             reverse = not reverse
         return ret
-        
-        

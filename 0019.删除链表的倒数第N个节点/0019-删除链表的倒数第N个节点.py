@@ -4,20 +4,20 @@
 #         self.val = x
 #         self.next = None
 
+
 class Solution:
     def removeNthFromEnd(self, head: ListNode, n: int) -> ListNode:
-        pre,fast,slow = None,head,head
+        pre, fast, slow = None, head, head
         for _ in range(n):
             fast = fast.next
         while fast:
-            pre,slow,fast = slow,slow.next,fast.next
+            pre, slow, fast = slow, slow.next, fast.next
         if slow == head:
             return head.next
         else:
             pre.next = slow.next
         return head
-            
-        
+
         """
         def get_len(head):
             ret = 0
@@ -41,4 +41,3 @@ class Solution:
             pre.next = cur.next
             return head
         """
-            

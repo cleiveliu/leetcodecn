@@ -1,6 +1,7 @@
 import random
-class Solution:
 
+
+class Solution:
     def __init__(self, nums: List[int]):
         self._start = nums
         self._nums = nums.copy()
@@ -11,7 +12,6 @@ class Solution:
         """
         self._nums = self._start.copy()
         return self._nums
-        
 
     def shuffle(self) -> List[int]:
         """
@@ -19,7 +19,6 @@ class Solution:
         """
         random.shuffle(self._nums)
         return self._nums
-        
 
 
 # Your Solution object will be instantiated and called as such:

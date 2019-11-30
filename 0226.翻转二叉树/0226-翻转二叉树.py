@@ -5,6 +5,7 @@
 #         self.left = None
 #         self.right = None
 
+
 class Solution:
     def invertTree(self, root: TreeNode) -> TreeNode:
         def h(root):
@@ -13,5 +14,6 @@ class Solution:
             root.left, root.right = root.right, root.left
             h(root.left)
             h(root.right)
+
         h(root)
         return root

@@ -1,10 +1,6 @@
 class Solution:
     def isValid(self, s: str) -> bool:
-        d = {
-            ']':'[',
-            '}':'{',
-            ')':'('
-        }
+        d = {"]": "[", "}": "{", ")": "("}
         stack = []
         for c in s:
             if c in d:

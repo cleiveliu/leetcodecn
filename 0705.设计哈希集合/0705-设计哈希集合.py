@@ -1,10 +1,9 @@
 class MyHashSet(object):
-
     def __init__(self):
         """
         Initialize your data structure here.
         """
-        self.data = [False] * (2**14) # 2**14 = 16000?
+        self.data = [False] * (2 ** 14)  # 2**14 = 16000?
 
     def add(self, key):
         """
@@ -13,14 +12,13 @@ class MyHashSet(object):
         """
         h_val = self._hash(key)
         if self.contains(key):
-            return 
+            return
         if self.data[h_val] is False:
             self.data[h_val] = key
         elif isinstance(self.data[h_val], list):
             self.data[h_val].append(key)
         else:
-            self.data[h_val] = [self.data[h_val],key]
-        
+            self.data[h_val] = [self.data[h_val], key]
 
     def remove(self, key):
         """
@@ -58,12 +56,13 @@ class MyHashSet(object):
             else:
                 return False
         return False
-    def _hash(self,key):
+
+    def _hash(self, key):
         h_val = 0
         for c in str(key):
             h_val += ord(c)
-        return h_val & (2**14 -1)
-    
+        return h_val & (2 ** 14 - 1)
+
 
 # Your MyHashSet object will be instantiated and called as such:
 # obj = MyHashSet()

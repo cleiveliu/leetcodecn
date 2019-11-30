@@ -4,6 +4,7 @@
 #         self.val = x
 #         self.next = None
 
+
 class Solution:
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
         def to_arr(list_):
@@ -13,23 +14,24 @@ class Solution:
                 ret.append(cur.val)
                 cur = cur.next
             return ret
+
         a1 = to_arr(l1)
         a2 = to_arr(l2)
-        i,j = len(a1)-1, len(a2)-1
+        i, j = len(a1) - 1, len(a2) - 1
         ret = []
         rem = 0
         while i >= 0 and j >= 0:
-            ret.append( (a1[i]+a2[j]+rem)%10)
-            rem = (a1[i]+a2[j]+rem)//10
+            ret.append((a1[i] + a2[j] + rem) % 10)
+            rem = (a1[i] + a2[j] + rem) // 10
             i -= 1
             j -= 1
         while i >= 0:
-            ret.append( (a1[i]+rem)%10)
-            rem = (a1[i]+rem)//10
+            ret.append((a1[i] + rem) % 10)
+            rem = (a1[i] + rem) // 10
             i -= 1
         while j >= 0:
-            ret.append( (a2[j]+rem)%10)
-            rem = (a2[j]+rem)//10
+            ret.append((a2[j] + rem) % 10)
+            rem = (a2[j] + rem) // 10
             j -= 1
         if rem > 0:
             ret.append(rem)
@@ -40,5 +42,3 @@ class Solution:
             cur.next = node
             cur = cur.next
         return dummy.next
-        
-            

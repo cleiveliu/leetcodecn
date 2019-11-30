@@ -5,6 +5,7 @@
 #         self.left = None
 #         self.right = None
 
+
 class Solution:
     def isCousins(self, root: TreeNode, x: int, y: int) -> bool:
         if not root:
@@ -16,7 +17,7 @@ class Solution:
                 if node.left and node.right:
                     new_stack.append(node.left)
                     new_stack.append(node.right)
-                    if set([node.left.val, node.right.val]) == set([x,y]):
+                    if set([node.left.val, node.right.val]) == set([x, y]):
                         return False
                 elif node.left:
                     new_stack.append(node.left)
@@ -27,4 +28,3 @@ class Solution:
                 return True
             stack = new_stack
         return False
-            

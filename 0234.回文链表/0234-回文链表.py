@@ -4,6 +4,7 @@
 #         self.val = x
 #         self.next = None
 
+
 class Solution:
     def isPalindrome(self, head: ListNode) -> bool:
         def to_arr(node):
@@ -13,6 +14,6 @@ class Solution:
                 ret.append(cur.val)
                 cur = cur.next
             return ret
+
         arr = to_arr(head)
         return arr == arr[::-1]
-        

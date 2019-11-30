@@ -1,6 +1,6 @@
 class Solution:
     def isLongPressedName(self, name: str, typed: str) -> bool:
-        slow, fast = 0,0
+        slow, fast = 0, 0
         while slow < len(name) and fast < len(typed):
             if name[slow] == typed[fast]:
                 slow += 1

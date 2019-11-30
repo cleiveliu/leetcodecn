@@ -5,6 +5,7 @@
 #         self.left = None
 #         self.right = None
 
+
 class Solution:
     def levelOrder(self, root: TreeNode) -> List[List[int]]:
         if not root:
@@ -24,4 +25,3 @@ class Solution:
             stack = new_stack
             ret.append(level)
         return ret
-        

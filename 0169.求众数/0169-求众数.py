@@ -1,6 +1,6 @@
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
-        ret = [nums[0],1]
+        ret = [nums[0], 1]
         for num in nums[1:]:
             if num == ret[0]:
                 ret[1] += 1

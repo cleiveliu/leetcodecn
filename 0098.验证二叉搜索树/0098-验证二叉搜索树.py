@@ -5,6 +5,7 @@
 #         self.left = None
 #         self.right = None
 
+
 class Solution:
     def isValidBST(self, root: TreeNode) -> bool:
         def h(node):
@@ -15,6 +16,7 @@ class Solution:
             ret.append(node.val)
             ret.extend(h(node.right))
             return ret
+
         arr = h(root)
         if not arr:
             return True
@@ -24,4 +26,3 @@ class Solution:
                 return False
             pre = a
         return True
-        

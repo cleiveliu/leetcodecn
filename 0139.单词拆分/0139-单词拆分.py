@@ -1,14 +1,14 @@
 class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
-        
+
         break_point = [0]
-        for i in range(len(s)+1):
+        for i in range(len(s) + 1):
             for j in break_point:
                 if s[j:i] in wordDict:
                     break_point.append(i)
                     break
         return break_point[-1] == len(s)
-        
+
         """
         def h(_set, s, i, j):
             if j >= len(s)-1 and s[i:j+1] in _set:
@@ -23,4 +23,3 @@ class Solution:
         _set = set(wordDict)
         return h(_set, s, 0, 0)
         """
-            

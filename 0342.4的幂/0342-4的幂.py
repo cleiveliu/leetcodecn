@@ -5,5 +5,6 @@ class Solution:
                 return True
             if n % 4 != 0 or n < 1:
                 return False
-            return h(n//4)
+            return h(n // 4)
+
         return h(num)

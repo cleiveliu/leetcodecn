@@ -1,12 +1,10 @@
 class MinStack:
-
     def __init__(self):
         """
         initialize your data structure here.
         """
         self.vals = []
         self.mins = []
-        
 
     def push(self, x: int) -> None:
         self.vals.append(x)
@@ -19,12 +17,10 @@ class MinStack:
         if self.vals:
             self.vals.pop()
             self.mins.pop()
-        
 
     def top(self) -> int:
         if self.vals:
             return self.vals[-1]
-        
 
     def getMin(self) -> int:
         if self.mins:

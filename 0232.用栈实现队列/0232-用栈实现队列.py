@@ -1,12 +1,10 @@
 class MyQueue:
-
     def __init__(self):
         """
         Initialize your data structure here.
         """
         self.in_stack = []
         self.out_stack = []
-        
 
     def push(self, x: int) -> None:
         """
@@ -37,6 +35,7 @@ class MyQueue:
                 self.out_stack.append(self.in_stack.pop())
             if self.out_stack:
                 return self.out_stack[-1]
+
     def empty(self) -> bool:
         """
         Returns whether the queue is empty.

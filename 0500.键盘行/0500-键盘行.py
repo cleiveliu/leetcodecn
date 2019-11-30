@@ -5,6 +5,6 @@ class Solution:
         s3 = set("zxcvbnm")
         ret = []
         for w in words:
-            if any(s.issuperset(set(w.lower())) for s in (s1,s2,s3)):
+            if any(s.issuperset(set(w.lower())) for s in (s1, s2, s3)):
                 ret.append(w)
         return ret

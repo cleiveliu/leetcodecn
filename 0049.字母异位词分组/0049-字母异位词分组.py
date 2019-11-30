@@ -4,7 +4,7 @@ class Solution:
         ret = []
         index = 0
         for word in strs:
-            s = ''.join(sorted(word))
+            s = "".join(sorted(word))
             if s in d:
                 ret[d[s]].append(word)
             else:
@@ -12,5 +12,3 @@ class Solution:
                 index += 1
                 ret.append([word])
         return ret
-                
-        

@@ -1,13 +1,13 @@
 class Solution:
     def advantageCount(self, A: List[int], B: List[int]) -> List[int]:
         A.sort()
-        B = [(n,i) for i,n in enumerate(B)]
+        B = [(n, i) for i, n in enumerate(B)]
         B.sort(key=lambda x: x[0])
         temp = []
-        ret = [-1]*len(A)
-        i,j = 0,0
+        ret = [-1] * len(A)
+        i, j = 0, 0
         while i < len(A) and j < len(B):
-            n,index = B[j]
+            n, index = B[j]
             if A[i] > n:
                 ret[index] = A[i]
                 i += 1

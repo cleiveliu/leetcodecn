@@ -4,20 +4,21 @@
 #         self.val = x
 #         self.next = None
 
+
 class Solution:
     def splitListToParts(self, head: ListNode, k: int) -> List[ListNode]:
         def get_len(node):
             if node is None:
                 return 0
             return 1 + get_len(node.next)
-        
+
         cur = head
         len_ = get_len(cur)
-        
+
         ret = []
-        base = len_//k
-        plus = len_ - (base*k)
-        
+        base = len_ // k
+        plus = len_ - (base * k)
+
         cur = head
         for _ in range(k):
             tem = cur

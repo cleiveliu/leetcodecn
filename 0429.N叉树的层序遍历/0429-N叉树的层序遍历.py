@@ -5,14 +5,16 @@ class Node:
         self.val = val
         self.children = children
 """
+
+
 class Solution:
-    def levelOrder(self, root: 'Node') -> List[List[int]]:
+    def levelOrder(self, root: "Node") -> List[List[int]]:
         if not root:
             return []
         stack = [root]
         ret = []
         while stack:
-            new_stack =[]
+            new_stack = []
             vals = []
             while stack:
                 node = stack.pop(0)

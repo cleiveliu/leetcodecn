@@ -5,14 +5,15 @@
 #         self.left = None
 #         self.right = None
 
+
 class Solution:
     def sortedArrayToBST(self, nums: List[int]) -> TreeNode:
         def h(arr):
             if arr:
-                mid  = len(arr)//2
+                mid = len(arr) // 2
                 root = TreeNode(arr[mid])
                 root.left = h(arr[:mid])
-                root.right = h(arr[mid+1:])
+                root.right = h(arr[mid + 1 :])
                 return root
+
         return h(nums)
-        

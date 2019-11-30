@@ -10,6 +10,8 @@ class Employee:
         # the id of direct subordinates
         self.subordinates = subordinates
 """
+
+
 class Solution:
     def getImportance(self, employees, i):
         """
@@ -27,4 +29,3 @@ class Solution:
             for n in d[i][1]:
                 stack.append(n)
         return ret
-            

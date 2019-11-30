@@ -5,10 +5,12 @@
 #         self.left = None
 #         self.right = None
 
+
 class Solution:
     def countNodes(self, root: TreeNode) -> int:
         def h(root):
             if not root:
                 return 0
             return 1 + h(root.left) + h(root.right)
+
         return h(root)
