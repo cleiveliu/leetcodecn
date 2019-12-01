@@ -10,8 +10,12 @@ import os
 
 
 class Args:
-    pathname = os.path.dirname(__file__)
-    commit_massage = "auto commit"
+    def __init__(self, pathname=os.path.dirname(__file__), commit_message="auto commit"):
+        self.pathname = pathname
+        self.commit_message = commit_message
+
+    def __repr__(self):
+        return "Args(pathname={}, commit_message={})".format(self.pathname, self.commit_message)
 
 
 def _exit():
