@@ -14,7 +14,7 @@ class Solution:
                 str_nums = list(str(cnt))
                 chars[index] = pre
                 index += 1
-                chars[index:index+len(str_nums)] = str_nums
+                chars[index : index + len(str_nums)] = str_nums
                 index += len(str_nums)
             else:
                 chars[index] = pre

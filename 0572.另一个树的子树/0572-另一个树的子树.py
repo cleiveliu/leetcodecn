@@ -5,11 +5,14 @@
 #         self.left = None
 #         self.right = None
 
+
 class Solution:
     def isSubtree(self, s: TreeNode, t: TreeNode) -> bool:
-        
         def to_tuple(node):
-            return (node.val, to_tuple(node.left), to_tuple(node.right)) if node else None
+            return (
+                (node.val, to_tuple(node.left), to_tuple(node.right)) if node else None
+            )
+
         return str(to_tuple(t)) in str(to_tuple(s))
         """
         def is_same(t1, t2):

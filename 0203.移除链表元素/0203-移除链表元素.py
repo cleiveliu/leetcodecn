@@ -4,6 +4,7 @@
 #         self.val = x
 #         self.next = None
 
+
 class Solution:
     def removeElements(self, head: ListNode, val: int) -> ListNode:
         def remove(node, target):
@@ -14,4 +15,5 @@ class Solution:
             else:
                 node.next = remove(node.next, target)
                 return node
+
         return remove(head, val)

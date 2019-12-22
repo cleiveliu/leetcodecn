@@ -5,6 +5,7 @@
 #         self.left = None
 #         self.right = None
 
+
 class Solution:
     def findMode(self, root: TreeNode) -> List[int]:
         def to_arr(node):
@@ -15,7 +16,7 @@ class Solution:
             ret.append(node.val)
             ret.extend(to_arr(node.right))
             return ret
-        
+
         arr = to_arr(root)
         if len(arr) == 0:
             return []
@@ -30,5 +31,5 @@ class Solution:
                 index += 1
             d[cur_val] = cnt
         max_cnt = max(d.values())
-        
-        return [k for k,v in d.items() if v >= max_cnt]
+
+        return [k for k, v in d.items() if v >= max_cnt]

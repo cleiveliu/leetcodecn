@@ -4,5 +4,4 @@ class Solution:
         for i in range(len(nums)):
             index = abs(nums[i]) - 1
             nums[index] = -(abs(nums[index]))
-        return [i+1 for i,x in enumerate(nums) if x > 0]
-    
+        return [i + 1 for i, x in enumerate(nums) if x > 0]

@@ -6,7 +6,7 @@ class Solution:
                 d[val][1] = i
                 d[val][2] += 1
             else:
-                d[val] = [i,i,1]
-        ret = max(d.values(), key=lambda x:(x[2], -(x[1]-x[0])))
-        
+                d[val] = [i, i, 1]
+        ret = max(d.values(), key=lambda x: (x[2], -(x[1] - x[0])))
+
         return ret[1] - ret[0] + 1

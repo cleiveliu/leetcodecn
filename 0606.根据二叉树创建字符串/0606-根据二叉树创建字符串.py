@@ -5,6 +5,7 @@
 #         self.left = None
 #         self.right = None
 
+
 class Solution:
     def tree2str(self, t: TreeNode) -> str:
         def h(t):
@@ -18,4 +19,5 @@ class Solution:
                 return f"{str(t.val)}({h(t.left)})"
             if t.left and t.right:
                 return f"{str(t.val)}({h(t.left)})({h(t.right)})"
+
         return h(t)

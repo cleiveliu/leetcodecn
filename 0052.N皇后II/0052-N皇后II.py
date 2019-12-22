@@ -5,6 +5,7 @@ class Solution:
 
         def add_solution():
             ret[0] += 1
+
         def add_queen(row, col):
             t = (row, col)
             queens.add(t)

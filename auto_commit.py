@@ -10,12 +10,16 @@ import os
 
 
 class Args:
-    def __init__(self, pathname=os.path.dirname(__file__), commit_message="auto commit"):
+    def __init__(
+        self, pathname=os.path.dirname(__file__), commit_message="auto commit"
+    ):
         self.pathname = pathname
         self.commit_message = commit_message
 
     def __repr__(self):
-        return "Args(pathname={}, commit_message={})".format(self.pathname, self.commit_message)
+        return "Args(pathname={}, commit_message={})".format(
+            self.pathname, self.commit_message
+        )
 
 
 def _exit():
@@ -54,7 +58,7 @@ def perse_args():
 def execute(args: Args):
     os.chdir(args.pathname)
     os.system("git add .")
-    os.system("git commit -m \"{}\"".format(args.commit_massage))
+    os.system('git commit -m "{}"'.format(args.commit_massage))
     os.system("git push")
 
 
